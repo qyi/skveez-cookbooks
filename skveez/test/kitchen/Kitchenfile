@@ -1,0 +1,12 @@
+platform :ubuntu do
+  version "12.04" do
+    box "base"
+    box_url "~/Workspace/base.box"
+  end
+end
+
+cookbook "skveez" do
+  configuration "app"
+  exclude :platform => 'centos'
+  runtimes []
+end

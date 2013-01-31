@@ -1,0 +1,32 @@
+
+server {
+
+	listen <%= @port %>;
+	server_name <%= @host %>;
+	
+	client_max_body_size 20M;
+	
+	root <%= @root %>;
+	index <%= @index %>;
+	try_files $uri $uri/ @notfile;
+	
+	access_log /var/log/nginx/<%= @name %>/access.log;
+	error_log /var/log/nginx/<%= @name %>/error.log;
+
+	location @notfile {
+	    rewrite ^(.*) /<%= @index %> last;
+	}
+
+	location ~ \.php$ {
+		auth_basic off;
+		fastcgi_pass 127.0.0.1:9000;
+		fastcgi_index /<%= @index %>;
+		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+		fastcgi_read_timeout 600;
+		fastcgi_connect_timeout 600;
+		include fastcgi_params;
+	}
+
+}
+
+

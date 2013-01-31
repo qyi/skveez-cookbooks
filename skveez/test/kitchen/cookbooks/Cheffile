@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+cookbook 'java'
+cookbook 'sudo'
+cookbook 'users'
+cookbook 'zsh'
+
+cookbook 'checkinstall',
+	:git => 'git@g.whysofast.ru:cookbooks/checkinstall.git'
+
+cookbook 'nginx',
+	:git => 'git@g.whysofast.ru:cookbooks/nginx.git'
+
+cookbook 'php',
+	:git => 'git@g.whysofast.ru:cookbooks/php.git'
+
+cookbook 'elasticsearch',
+	:git => 'http://github.com/elasticsearch/cookbook-elasticsearch.git'

@@ -1,0 +1,12 @@
+platform :ubuntu do
+  version "12.04" do
+    box "base"
+    box_url "/tmp/base.box"
+  end
+end
+
+cookbook "php" do
+  lint(:ignore => ["FC017"])
+  exclude :platform => 'centos'
+  runtimes []
+end

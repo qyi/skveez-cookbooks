@@ -1,0 +1,6 @@
+source :rubygems
+
+gem 'test-kitchen'
+gem 'capifony',        "~> 2.2.3"
+gem 'librarian',       "~> 0.0.26"
+gem 'ironfan',         :git => "git@g.whysofast.ru:ironfan/ironfan.git"
