@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-#^syntax detection
-
-cookbook 'checkinstall',
-	:git => 'git@g.whysofast.ru:cookbooks/checkinstall.git'
