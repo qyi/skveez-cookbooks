@@ -1,0 +1,26 @@
+{
+  "name": "skveez_node",
+  "default_attributes": {
+  },
+  "json_class": "Chef::Role",
+  "env_run_lists": {
+  },
+  "run_list": [
+    "recipe[apt]",
+    "recipe[skveez::sudo]",
+    "recipe[skveez::zsh]"
+  ],
+  "description": "Install base node",
+  "chef_type": "role",
+  "override_attributes": {
+    "authorization": {
+      "sudo": {
+        "groups": [
+          "sudo"
+        ],
+        "passwordless": true,
+        "include_sudoers_d": true
+      }
+    }
+  }
+}

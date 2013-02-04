@@ -1,0 +1,8 @@
+{
+  "chef_server": {
+    "server_url": "http://10.10.10.2:4000",
+    "webui_enabled": true,
+    "init_style": "runit"
+  },
+  "run_list": [ "recipe[chef-server::rubygems-install]" ]
+}

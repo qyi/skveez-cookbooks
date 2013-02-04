@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+#Community cookbooks
+cookbook 'ant'
+cookbook 'apt'
+cookbook 'aws'
+cookbook 'bluepill'
+cookbook 'build-essential'
+cookbook 'elasticsearch'
+cookbook 'ffmpeg'
+cookbook 'haproxy'
+cookbook 'java'
+cookbook 'python'
+cookbook 'redisio'
+cookbook 'runit'
+cookbook 'thrift'
+cookbook 'users'
+
+cookbook 'chef-server'
+
+#Github cookbooks
+cookbook 'runit-man',
+	:git => 'https://github.com/Undev/runit-man-cookbook.git'

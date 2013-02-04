@@ -1,0 +1,27 @@
+{
+  "name": "skveez_ffmpeg",
+  "default_attributes": {
+  },
+  "json_class": "Chef::Role",
+  "env_run_lists": {
+  },
+  "run_list": [
+    "role[skveez_node]",
+    "recipe[skveez::app]",
+    "recipe[ffmpeg::package]"
+  ],
+  "description": "Install base node",
+  "chef_type": "role",
+  "override_attributes": {
+    "java" : {
+      "jdk_version": 7,
+      "install_flavor": "oracle",
+      "oracle": {
+        "accept_oracle_download_terms": true
+      }
+    },
+    "nginx":{
+      "install_method": "source"
+    }
+  }
+}

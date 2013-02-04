@@ -1,0 +1,3 @@
+<% @env.each do |name, val| %>
+env[SYMFONY__<%= name.upcase %>] = <%= val %>
+<% end %>

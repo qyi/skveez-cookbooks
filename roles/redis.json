@@ -1,0 +1,16 @@
+{
+  "name": "skveez_redis",
+  "default_attributes": {
+  },
+  "json_class": "Chef::Role",
+  "env_run_lists": {
+  },
+  "run_list": [
+    "role[skveez_node]",
+    "recipe[skveez::redis]"
+  ],
+  "description": "Install base node",
+  "chef_type": "role",
+  "override_attributes": {
+  }
+}

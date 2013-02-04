@@ -1,0 +1,16 @@
+
+server {
+
+	listen <%= @port %>;
+	server_name <%= @host %>;
+	
+	client_max_body_size 20M;
+	
+	location / {
+    root   /var/www/nginx-default;
+    index  index.html index.htm;
+  }
+
+}
+
+
